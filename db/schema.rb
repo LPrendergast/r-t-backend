@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2019_12_11_170634) do
     t.string "location"
     t.string "date"
     t.string "artist_id"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -23,10 +23,11 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
+    render json: @events
   end
 
   def update
-    @event = Article.find(params[:id])
+    @event = Event.find(params[:id])
 
     if @event.update(event_params)
       redirect_to @event
@@ -47,7 +48,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description,:date, :image_url,:location)
+    params.require(:event).permit(:title, :description,:date, :image_url,:location,:latitude,:longitude)
   end
 
 end

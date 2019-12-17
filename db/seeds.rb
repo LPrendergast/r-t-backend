@@ -10,6 +10,6 @@ artist1 = Artist.create(username: "luke", artist_name: "luketest", portfolio: "t
 
 artist2 = Artist.create(username: "john", artist_name: "johntest", portfolio: "johntestport", image_url: "johnimage", description:"joooohhhnnn",password_digest: "2")
 
-event1 = Event.create(title: "Lukes event",description: "Lukes test event", image_url: "testeventimage", location:"london", date:"12/06/20", artist_id: artist1.id)
-event2 = Event.create(title: "Johns event",description: "Johns test event", image_url: "NextTest", location:"London aswell", date:"12/06/21", artist_id: artist2.id)
-event3 = Event.create(title: "EVENT",description: "DESC EVENT", image_url: "IMAGE EVENT", location:"WOOOOO", date:"10000", artist_id: artist1.id)
+event1 = Event.create(title: "Lukes event",description: "Lukes test event", image_url: "testeventimage", location:"london", date:"12/06/20", artist_id: artist1.id, latitude: 51.5074, longitude: 0.1278)
+event2 = Event.create(title: "Johns event",description: "Johns test event", image_url: "NextTest", location:"London aswell", date:"12/06/21", artist_id: artist2.id, latitude: 51.5074, longitude: 0.1278)
+event3 = Event.create(title: "EVENT",description: "DESC EVENT", image_url: "IMAGE EVENT", location:"WOOOOO", date:"10000", artist_id: artist1.id, latitude: 51.5074, longitude: 0.1278)

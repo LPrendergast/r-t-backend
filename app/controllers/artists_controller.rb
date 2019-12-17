@@ -41,10 +41,9 @@ class ArtistsController < ApplicationController
  end
 
  def update
-   @artist = Article.find(params[:id])
-
-   if @artist.update(event_params)
-     redirect_to @artist
+   @artist = Artist.find(params[:id])
+   if @artist.update(artist_params)
+     # redirect_to @artist
      render json: @artist
    else
      render 'edit'
