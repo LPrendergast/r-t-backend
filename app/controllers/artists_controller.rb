@@ -36,9 +36,24 @@ class ArtistsController < ApplicationController
    end
  end
 
+ def edit
+   @artist = Artist.find(params[:id])
+ end
+
+ def update
+   @artist = Article.find(params[:id])
+
+   if @artist.update(event_params)
+     redirect_to @artist
+     render json: @artist
+   else
+     render 'edit'
+   end
+ end
+
  def destroy
    @artist = Artist.find(params[:id])
-   @arist.destroy
+   @artist.destroy
    render json: @artist
  end
 

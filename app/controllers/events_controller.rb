@@ -11,10 +11,38 @@ class EventsController < ApplicationController
     end
   end
 
+  def show
+    render json: Event.find(params[:id])
+
+  end
+
   def index
     @events = Event.all
     render json: @events
   end
+
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Article.find(params[:id])
+
+    if @event.update(event_params)
+      redirect_to @event
+      render json: @event
+    else
+      render 'edit'
+    end
+  end
+
+
+   def destroy
+     @event = Event.find(params[:id])
+     @event.destroy
+     render json: @event
+   end
+
 
   private
 
