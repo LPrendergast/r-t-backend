@@ -1,4 +1,15 @@
 class StylesController < ApplicationController
+
+  def create
+    style = Style.create(style_params)
+    artist = @current_artist
+    style.update(artist: artist)
+    if style.valid?
+      render json: style
+    else
+      render json:{errors: style.errors.full_message}, status: :not_accepted
+    end
+  end
   def show
     @style = Style.find(params[:id])
     render json: @style
@@ -35,7 +46,7 @@ class StylesController < ApplicationController
   private
 
   def style_params
-    params.require(:Style).permit(:website_colour, :background_colour,:font_family,:font_colour)
+    params.require(:style).permit(:website_colour, :background_colour,:font_family,:font_colour)
   end
 
 end
