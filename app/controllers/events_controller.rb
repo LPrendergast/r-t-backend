@@ -12,8 +12,8 @@ class EventsController < ApplicationController
   end
 
   def show
-    render json: Event.find(params[:id])
-
+    @event = Event.find(params[:id])
+    render json: @event
   end
 
   def index
@@ -30,7 +30,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
 
     if @event.update(event_params)
-      redirect_to @event
+      # redirect_to @event
       render json: @event
     else
       render 'edit'
