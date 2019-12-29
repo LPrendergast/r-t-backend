@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  website_colour: MyString
+  background_colour: MyString
+  font_family: MyString
+  font_colour: MyString
+  artist_id: 1
+
+two:
+  website_colour: MyString
+  background_colour: MyString
+  font_family: MyString
+  font_colour: MyString
+  artist_id: 1

@@ -13,3 +13,6 @@ artist2 = Artist.create(username: "john", artist_name: "johntest", portfolio: "j
 event1 = Event.create(title: "Lukes event",description: "Lukes test event", image_url: "testeventimage", location:"london", date:"12/06/20", artist_id: artist1.id, latitude: 51.5074, longitude: 0.1278)
 event2 = Event.create(title: "Johns event",description: "Johns test event", image_url: "NextTest", location:"London aswell", date:"12/06/21", artist_id: artist2.id, latitude: 51.5074, longitude: 0.1278)
 event3 = Event.create(title: "EVENT",description: "DESC EVENT", image_url: "IMAGE EVENT", location:"WOOOOO", date:"10000", artist_id: artist1.id, latitude: 51.5074, longitude: 0.1278)
+
+
+style1 = Style.create(website_colour: 'black', background_colour: 'green', font_family: 'American Typewriter', font_colour: 'red', artist_id: 1)
