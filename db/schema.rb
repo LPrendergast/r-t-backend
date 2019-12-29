@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_29_152417) do
+ActiveRecord::Schema.define(version: 2019_12_29_182033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 2019_12_29_152417) do
     t.string "image_url"
     t.string "description"
     t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "event_styles", force: :cascade do |t|
+    t.string "website_colour"
+    t.string "background_colour"
+    t.string "font_family"
+    t.string "font_colour"
+    t.integer "event_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

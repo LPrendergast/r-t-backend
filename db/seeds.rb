@@ -16,3 +16,7 @@ event3 = Event.create(title: "EVENT",description: "DESC EVENT", image_url: "IMAG
 
 
 style1 = Style.create(website_colour: 'black', background_colour: 'green', font_family: 'American Typewriter', font_colour: 'red', artist_id: 1)
+style2 = Style.create(website_colour: 'red', background_colour: 'blue', font_family: 'American Typewriter', font_colour: 'grey', artist_id: 2)
+
+eventstyle1 = EventStyle.create(website_colour: 'red', background_colour: 'blue', font_family: 'American Typewriter', font_colour: 'grey', event_id: 1)
+eventstyle2 = EventStyle.create(website_colour: 'black', background_colour: 'green', font_family: 'American Typewriter', font_colour: 'grey', event_id: 2)

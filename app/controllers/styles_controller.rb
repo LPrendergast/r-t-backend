@@ -3,6 +3,7 @@ class StylesController < ApplicationController
   def create
     style = Style.create(style_params)
     artist = @current_artist
+
     style.update(artist: artist)
     if style.valid?
       render json: style
